@@ -5,11 +5,14 @@ exports.datapost = ((req, res) => {
         if (!err) {
             let mailTransporter = nodemailer.createTransport({
                 service: "gmail.com",
+                host: 'smtp.gmail.com',
+                port: 465,
+                secure: true,
                 auth: {
                     user: "reddysainadh18@gmail.com",
                     pass: "snaavk81",
                 },
-                secureConnection: true,
+
                 tls: {
                     rejectUnauthorized: false,
                     secureProtocol: "TLSv1_method",
