@@ -24,6 +24,7 @@ exports.datapost = ((req, res) => {
             }
 
             mailTransporter.sendMail(mailDetails, function (err7, data) {
+                console.log(err7, data)
                 res.send({ message: "success" })
 
             })
